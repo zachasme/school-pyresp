@@ -1,0 +1,16 @@
+{
+	"source": {
+		"name": "pong",
+	   	"address": {
+			"host": "localhost",
+		   	"addressCode": "socket",
+		   	"port": 9998
+		}
+	},
+   	"tuple": [
+		{"type": "java.lang.String", "value": "test"}
+	],
+   	"type": "TUPLE_REPLY",
+   	"target": "ping",
+   	"session": 0
+}

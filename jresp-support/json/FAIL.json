@@ -1,0 +1,13 @@
+{
+	"message":"Node blah is unknown at socket:/127.0.0.1:9998",
+	"target":"ping",
+	"source":{
+		"address":{
+			"addressCode":"socket",
+			"host":"localhost",
+			"port":9998
+		}
+	},
+	"session":0,
+	"type":"FAIL"
+}

@@ -1,0 +1,13 @@
+{
+	"type": "ACK",
+	"target": "pong",
+	"source": {
+	   "name": "ping",
+	   "address": {
+		   "host": "localhost",
+		   "port": 9999,
+		   "addressCode": "socket"
+	   }
+   },
+   "session": 0
+}

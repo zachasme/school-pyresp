@@ -1,0 +1,28 @@
+{
+	"type": "GET_REQUEST",
+   	"template": [
+		{
+			"value":{
+				"value": 12321321,
+			   	"type": "java.lang.Integer"
+			},
+		   	"type": "org.cmg.jresp.knowledge.ActualTemplateField"
+		},
+	   	{
+			"value": {
+				"type": "java.lang.String"
+			},
+			"type": "org.cmg.jresp.knowledge.FormalTemplateField"
+		}
+	],
+   	"session": 1,
+   	"source": {
+		"address": {
+			"port": 9998,
+			"addressCode": "socket",
+		   	"host": "localhost"
+		},
+	   	"name": "pong"
+	},
+	"target": "ping"
+}

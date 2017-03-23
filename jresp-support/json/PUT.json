@@ -1,0 +1,19 @@
+{
+	"tuple":[
+		{
+			"type":"java.lang.String",
+			"value":"PING"
+		}
+	],
+	"target":"pong",
+	"source":{
+		"name":"ping",
+		"address":{
+			"addressCode":"socket",
+			"host":"localhost",
+			"port":9999
+		}
+	},
+	"session":0,
+	"type":"PUT_REQUEST"
+}
