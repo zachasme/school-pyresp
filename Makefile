@@ -7,6 +7,9 @@ PONGCLASS=org.cmg.jresp.examples.pingpong.RemotePingPong
 REVALJAR=jresp-support/RemoteEvaluation
 REVALCLASS=examples.Chapter_2_Remote_Evaluation
 
+all:
+	$(PYTHON) -m example.basic
+
 test:
 	$(PYTHON) $(PYTHON_TEST_FLAGS)
 
