@@ -1,6 +1,39 @@
 # 02148 - A tuple space API implemented in Python
 
-## How-to
+## Usage
+The only import needed is `Node` and also `join_agents` if the main thread
+is going to complete before agents. A basic example:
+
+    from pyresp import Node, join_agents
+
+    # agents
+    def pinger(owner, other):
+      while True:
+        other.put("PING")
+        owner.get("PONG")
+
+    def ponger(owner, other):
+      while True:
+        owner.get("PING")
+        other.put("PONG")
+
+    # nodes
+    pingnode = Node()
+    pongnode = Node()
+
+    # add agents
+    pingnode.add(pinger, pongnode)
+    pongnode.add(ponger, pingnode)
+
+    # start nodes
+    pingnode.start()
+    pongnode.start()
+
+    # keep main thread waiting for agents to terminate
+    join_agents()
+
+
+## Tests
 While developing the API, we have made a couple of programs for testing the
 features of our API. Below you will find instructions on how to run these
 tests. We have supplied a make file for ease of use. The applications have
@@ -19,11 +52,6 @@ requires the python module `pytest`, which can be installed using
     pip install pytest
 
 Make sure one uses `pip3` and not `pip2`.
-
-### Running the benmcharking tools
-+ To compare the python and java implementations use `make benchmark-python`
-  and `make benchmark-java` respectively.
-+ To compare the python tuple space implementations use `make benchmark-ts`
 
 ### Running the RemotePingPong example
 + In one terminal, while in the root directory run `make runpong` to run the
