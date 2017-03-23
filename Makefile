@@ -11,7 +11,7 @@ test:
 	$(PYTHON) $(PYTHON_TEST_FLAGS)
 
 runping:
-	$(PYTHON) -m example.PING
+	$(PYTHON) -m jresp-support.PING
 
 runpong:
 	$(JAVA) $(JFLAGS) $(PONGJAR).jar $(PONGCLASS)
@@ -26,6 +26,6 @@ reval-debug:
 	$(JAVA) $(JFLAGS) $(REVALJAR)-debug.jar $(REVALCLASS)
 
 reval-client:
-	$(PYTHON) -m example.RemoteEvaluation
+	$(PYTHON) -m jresp-support.RemoteEvaluation
 
 .PHONY: test

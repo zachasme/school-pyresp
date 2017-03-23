@@ -1,15 +1,19 @@
 from pyresp import Node, join_agents
 
+ITERATIONS = 1000
+
 # agents
 def pinger(owner, other):
-  while True:
+  for i in range(ITERATIONS):
     other.put("PING")
     owner.get("PONG")
+    print("ping", i)
 
 def ponger(owner, other):
-  while True:
+  for i in range(ITERATIONS):
     owner.get("PING")
     other.put("PONG")
+    print("pong", i)
 
 # nodes
 pingnode = Node()
